@@ -13,4 +13,12 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+}); 
+
+Route::resource('admin','admincontroller');	
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
